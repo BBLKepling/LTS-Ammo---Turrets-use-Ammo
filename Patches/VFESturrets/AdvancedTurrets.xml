@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Advanced -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Security</li>
+    </mods>
+
+    <match Class="PatchOperationSequence">
+
+      <operations>
+
+	<!-- Description -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_FloorTurret"]/description</xpath>
+		<value>
+			<description>A submersible military-grade double barreled automatic turret which acts as a normal floor tile when unpowered. It only takes half as much damage when submerged. Requires industrial ammo to reload. May explode when damaged. Its dumb AI brain can't be directly controlled, so beware of friendly fire.</description>
+		</value>
+	</li>
+
+	<!-- Description -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_AutocannonDouble"]/description</xpath>
+		<value>
+			<description>A heavy automatic turret enhanced with 2 barrels. Requires industrial ammo to reload. It cannot fire at close-up targets, and may explode when damaged.</description>
+		</value>
+	</li>
+
+	<!-- Fuel Label -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_AutocannonDouble"]/comps/li/fuelLabel</xpath>
+		<value>
+			<fuelLabel>Shots until out of ammo</fuelLabel>
+		</value>
+	</li>
+
+	<!-- Feul Gizmo Label -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_AutocannonDouble"]/comps/li/fuelGizmoLabel</xpath>
+		<value>
+			<fuelGizmoLabel>Ammo left</fuelGizmoLabel>
+		</value>
+	</li>
+
+	<!-- Out of fuel Message -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_AutocannonDouble"]/comps/li/outOfFuelMessage</xpath>
+		<value>
+			<outOfFuelMessage>Cannot shoot: Needs ammo</outOfFuelMessage>
+		</value>
+	</li>
+
+	<!-- Ammo Type -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_AutocannonDouble"]/comps/li/fuelFilter</xpath>
+		<value>
+			<fuelFilter><thingDefs><li>AmmoIndustrial</li></thingDefs></fuelFilter>
+		</value>
+	</li>
+
+	<!-- Cost efficiency -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_AutocannonDouble"]/comps/li/fuelMultiplier</xpath>
+		<value>
+			<fuelMultiplier>0.5</fuelMultiplier>
+		</value>
+	</li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

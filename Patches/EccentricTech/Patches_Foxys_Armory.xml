@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Eccentric Tech - Foxy's Armory 2.0</li>
+  </mods>
+
+  <match Class="PatchOperationSequence">
+  <operations>
+
+<!-- ================== Turrets ================== -->
+
+<!-- P17 sentry gun -->
+
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Eccentric_Turret_P17SG"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+    <value>
+      <thingDefs>
+	    <li>AmmoSpacer</li>
+      </thingDefs>
+    </value>
+  </li>
+  
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Eccentric_Turret_P17SG"]/comps/li[@Class="CompProperties_Refuelable"]/fuelMultiplier</xpath>
+    <value>
+        <fuelMultiplier>1.00</fuelMultiplier>      
+    </value>
+  </li>
+
+<!-- L32 machine gun turret -->
+
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Eccentric_Turret_L32MG"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+    <value>
+      <thingDefs>
+	    <li>AmmoSpacer</li>
+      </thingDefs>
+    </value>
+  </li>
+  
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Eccentric_Turret_L32MG"]/comps/li[@Class="CompProperties_Refuelable"]/fuelMultiplier</xpath>
+    <value>
+        <fuelMultiplier>1.00</fuelMultiplier>      
+    </value>
+  </li>
+
+<!-- ACGL3 grenade launcher turret -->
+
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Eccentric_Turret_M3ACGL"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+    <value>
+      <thingDefs>
+	    <li>AmmoSpacer</li>
+      </thingDefs>
+    </value>
+  </li>
+  
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Eccentric_Turret_M3ACGL"]/comps/li[@Class="CompProperties_Refuelable"]/fuelMultiplier</xpath>
+    <value>
+        <fuelMultiplier>1.00</fuelMultiplier>      
+    </value>
+  </li>
+
+  </operations>
+  </match>
+
+</Operation>
+
+</Patch>

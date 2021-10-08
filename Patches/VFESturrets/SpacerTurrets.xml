@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Spacer -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Security</li>
+    </mods>
+
+    <match Class="PatchOperationSequence">
+
+      <operations>
+
+	<!-- Description -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeTurret"]/description</xpath>
+		<value>
+			<description>An automatic turret with a charge pulser gun on top, utilising advanced sensors which offer improved accuracy. Requires spacer ammo to reload. May explode when damaged.</description>
+		</value>
+	</li>
+
+	<!-- Fuel Label -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeTurret"]/comps/li/fuelLabel</xpath>
+		<value>
+			<fuelLabel>Shots until out of ammo</fuelLabel>
+		</value>
+	</li>
+
+	<!-- Feul Gizmo Label -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeTurret"]/comps/li/fuelGizmoLabel</xpath>
+		<value>
+			<fuelGizmoLabel>Ammo left</fuelGizmoLabel>
+		</value>
+	</li>
+
+	<!-- Out of fuel Message -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeTurret"]/comps/li/outOfFuelMessage</xpath>
+		<value>
+			<outOfFuelMessage>Cannot shoot: Needs ammo</outOfFuelMessage>
+		</value>
+	</li>
+
+	<!-- Ammo Type -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeTurret"]/comps/li/fuelFilter</xpath>
+		<value>
+			<fuelFilter><thingDefs><li>AmmoSpacer</li></thingDefs></fuelFilter>
+		</value>
+	</li>
+
+	<!-- Cost efficiency -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeTurret"]/comps/li/fuelMultiplier</xpath>
+		<value>
+			<fuelMultiplier>1</fuelMultiplier>
+		</value>
+	</li>
+
+
+	<!-- Description -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeComplex"]/description</xpath>
+		<value>
+			<description>A stationary charge cannon mounted on a metal barrier. Requires spacer ammo to reload.</description>
+		</value>
+	</li>
+
+	<!-- Fuel Label -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeComplex"]/comps/li/fuelLabel</xpath>
+		<value>
+			<fuelLabel>Shots until out of ammo</fuelLabel>
+		</value>
+	</li>
+
+	<!-- Feul Gizmo Label -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeComplex"]/comps/li/fuelGizmoLabel</xpath>
+		<value>
+			<fuelGizmoLabel>Ammo left</fuelGizmoLabel>
+		</value>
+	</li>
+
+	<!-- Out of fuel Message -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeComplex"]/comps/li/outOfFuelMessage</xpath>
+		<value>
+			<outOfFuelMessage>Cannot shoot: Needs ammo</outOfFuelMessage>
+		</value>
+	</li>
+
+	<!-- Ammo Type -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeComplex"]/comps/li/fuelFilter</xpath>
+		<value>
+			<fuelFilter><thingDefs><li>AmmoSpacer</li></thingDefs></fuelFilter>
+		</value>
+	</li>
+
+	<!-- Cost efficiency -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeComplex"]/comps/li/fuelMultiplier</xpath>
+		<value>
+			<fuelMultiplier>1</fuelMultiplier>
+		</value>
+	</li>
+
+	<!-- Capacity -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeComplex"]/comps/li/fuelCapacity</xpath>
+		<value>
+			<fuelCapacity>200</fuelCapacity>
+		</value>
+	</li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

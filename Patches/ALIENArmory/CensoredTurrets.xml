@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- MG 42 -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Censored Armory [1.3]</li>
+    </mods>
+
+    <match Class="PatchOperationSequence">
+
+      <operations>
+
+	<!-- Fuel Label -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "Turret_MG_42_RA"]/comps/li/fuelLabel</xpath>
+		<value>
+			<fuelLabel>Shots until out of ammo</fuelLabel>
+		</value>
+	</li>
+
+	<!-- Feul Gizmo Label -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "Turret_MG_42_RA"]/comps/li/fuelGizmoLabel</xpath>
+		<value>
+			<fuelGizmoLabel>Ammo left</fuelGizmoLabel>
+		</value>
+	</li>
+
+	<!-- Out of fuel Message -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "Turret_MG_42_RA"]/comps/li/outOfFuelMessage</xpath>
+		<value>
+			<outOfFuelMessage>Cannot shoot: Needs ammo</outOfFuelMessage>
+		</value>
+	</li>
+
+	<!-- Ammo Type -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "Turret_MG_42_RA"]/comps/li/fuelFilter</xpath>
+		<value>
+			<fuelFilter><thingDefs><li>AmmoIndustrial</li></thingDefs></fuelFilter>
+		</value>
+	</li>
+
+	<!-- Cost efficiency -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "Turret_MG_42_RA"]/comps/li/fuelMultiplier</xpath>
+		<value>
+			<fuelMultiplier>1</fuelMultiplier>
+		</value>
+	</li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>
